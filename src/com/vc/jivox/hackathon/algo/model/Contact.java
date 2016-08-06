@@ -95,6 +95,15 @@ public class Contact implements IContact {
 		if(contacts == null){
 			contacts = new Contacts();
 		}
+		return contacts.getContacts(this);
+	}
+	
+	public Set<Contact> addContact(Contact contact){
+		if(contacts == null){
+			contacts = new Contacts();
+		}
+		
+		contacts.addContact(contact, this);
 		
 		return contacts.getContacts();
 	}
